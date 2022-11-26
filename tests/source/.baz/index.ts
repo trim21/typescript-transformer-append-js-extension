@@ -1,1 +1,3 @@
-export function baz() { console.log('baz') }
+export function baz() {
+	console.log("baz");
+}

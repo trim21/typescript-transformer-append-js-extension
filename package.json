@@ -27,6 +27,8 @@
 	],
 	"scripts": {
 		"build": "tsc",
-		"test": "ttsc -p tests/tsconfig.json && echo \"Go look at tests/output/index.js to validate transformer did its job, because I'm too lazy to write a real test.\""
+		"test": "ttsc -p tests/tsconfig.json && echo \"Go look at tests/output/index.js to validate transformer did its job, because I'm too lazy to write a real test.\"",
+		"prepare": "husky install",
+		"lint-staged": "lint-staged -q"
 	}
 }

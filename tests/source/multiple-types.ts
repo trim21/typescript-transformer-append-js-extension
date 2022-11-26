@@ -1,3 +1,3 @@
-export interface Apple { }
+export interface Apple {}
 export class Banana {}
-export type Cherry = Apple | Banana
+export type Cherry = Apple | Banana;
