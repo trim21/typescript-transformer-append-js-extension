@@ -3,8 +3,8 @@
 		"target": "es2019",
 		"module": "commonjs",
 		"moduleResolution": "node",
-		"rootDir": "source",
-		"outDir": "output",
+		"rootDir": "src",
+		"outDir": "dist",
 		"strict": true,
 		"sourceMap": true,
 		"declaration": true,
@@ -17,6 +17,6 @@
 		"lib": [ "es2019" ],
 	},
 	"include": [
-		"source/**/*.ts",
-	],
+    "src/**/*.ts"
+  ],
 }

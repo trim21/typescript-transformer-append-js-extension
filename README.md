@@ -11,40 +11,40 @@ If your project includes files with `.` in the filename (e.g., `my.modules.tests
 
 # Usage
 1. Install `typescript`, `ttypescript`, and this transformer into your project if you don't already have them.
-	```
-	npm install --save-dev typescript
-	npm install --save-dev ttypescript
-	npm install --save-dev @zoltu/typescript-transformer-append-js-extension
-	```
-1. Add the transformer to your es2015 module `tsconfig-es.json` (or whatever `tsconfig.json` you are using to build es2015 modules)
-	```json
-	// tsconfig-es.json
-	{
-		"compilerOptions": {
-			"module": "es2015",
-			"plugins": [
-				{
-					"transform": "@zoltu/typescript-transformer-append-js-extension/output/index.js",
-					"after": true,
-				}
-			]
-		},
-	}
-	```
-1. Write some typescript with normal imports
-	```typescript
-	// foo.ts
-	export function foo() { console.log('foo') }
-	```
-	```typescript
-	// index.ts
-	import { foo } from './foo'
-	foo()
-	```
-1. Compile using `ttsc`
-	```
-	npx ttsc --project tsconfig-es.json
-	```
+    ```shell
+    npm install --save-dev typescript
+    npm install --save-dev ttypescript
+    npm install --save-dev @zoltu/typescript-transformer-append-js-extension
+    ```
+2. Add the transformer to your es2015 module `tsconfig-es.json` (or whatever `tsconfig.json` you are using to build es2015 modules)
+    ```json5
+    // tsconfig-es.json
+    {
+        "compilerOptions": {
+            "module": "es2015",
+            "plugins": [
+                {
+                    "transform": "@zoltu/typescript-transformer-append-js-extension/output/index.js",
+                    "after": true,
+                }
+            ]
+        },
+    }
+    ```
+3. Write some typescript with normal imports
+    ```typescript
+    // foo.ts
+    export function foo() { console.log('foo') }
+    ```
+    ```typescript
+    // index.ts
+    import { foo } from './foo'
+    foo()
+    ```
+4. Compile using `ttsc`
+    ```
+    npx ttsc --project tsconfig-es.json
+    ```
 
 ## Alternative Solutions
 
